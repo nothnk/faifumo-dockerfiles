@@ -2,7 +2,7 @@
 
 [![Gitlab](https://img.shields.io/static/v1.svg?label=Get%20the%20source%20code%20on&message=Github&color=555&style=flat&logo=github)](https://github.com/faifumo-dockerfiles/tree/master/base-ubuntu-nvm-git-repo/)
 [![Docker Hub](https://img.shields.io/static/v1.svg?label=Get%20the%20container%20on&message=Docker%20Hub&color=555&style=flat&logo=docker)](https://hub.docker.com/r/quelicm/faifumo-base-ubuntu-nvm-git/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/boldt/base-ubuntu-nvm-node-npm.svg)](https://hub.docker.com/r/quelicm/faifumo-base-ubuntu-nvm-git/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/quelicm/faifumo-base-ubuntu-nvm-git.svg)](https://hub.docker.com/r/quelicm/faifumo-base-ubuntu-nvm-git/)
 
 ## Description
 
