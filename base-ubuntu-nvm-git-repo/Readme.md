@@ -48,3 +48,19 @@ You can pass the options with `--build-arg node_version=v12.11.1`
 ```
 docker build --build-arg node_version=v12.11.1 -t your_docker_id/your_docker_name_repository
 ```
+
+## Test the build
+
+1. Download the image from docker hub
+
+```
+docker pull quelicm/faifumo-base-ubuntu-nvm-git:0.0.1
+```
+
+2. Run the image
+
+```
+docker run -p 4000:3000 quelicm/faifumo-base-ubuntu-nvm-git:0.0.1
+```
+
+3. Show the project in your browser in http://localhost:4000
