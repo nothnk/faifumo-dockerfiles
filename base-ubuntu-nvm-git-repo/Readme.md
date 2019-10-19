@@ -1,5 +1,9 @@
 # Ubuntu with nvm + node + npm + git + download repository
 
+[![Gitlab](https://img.shields.io/static/v1.svg?label=Get%20the%20source%20code%20on&message=Github&color=555&style=flat&logo=github)](https://github.com/faifumo-dockerfiles/tree/master/base-ubuntu-nvm-git-repo/)
+[![Docker Hub](https://img.shields.io/static/v1.svg?label=Get%20the%20container%20on&message=Docker%20Hub&color=555&style=flat&logo=docker)](https://hub.docker.com/r/quelicm/faifumo-base-ubuntu-nvm-git/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/boldt/base-ubuntu-nvm-node-npm.svg)](https://hub.docker.com/r/quelicm/faifumo-base-ubuntu-nvm-git/)
+
 ## Description
 
 This docker image is the default Ubuntu image with the Node Version Manager (nvm), node + the Node Package Manager and git support.
@@ -15,7 +19,7 @@ This docker image is the default Ubuntu image with the Node Version Manager (nvm
 Add to your Dockerfile
 
 ```
-FROM boldt/base-ubuntu-nvm-node-npm
+FROM quelicm/faifumo-base-ubuntu-nvm-git
 ```
 
 ## Build
