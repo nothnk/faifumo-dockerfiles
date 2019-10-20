@@ -28,11 +28,22 @@ FROM quelicm/faifumo-base-ubuntu-nvm-git
 
 ### Build
 
-1. Donwload this repo
+1. Donwload this repo and change into the directory `base-ubuntu-nvm-git-repo`
+
+```
+cd base-ubuntu-nvm-git-repo
+```
+
 2. Run
 
 ```
-docker build -t your_docker_id/your_docker_name_repository
+docker build -t your_docker_id/your_docker_name_repository .
+```
+
+3. Check your image is builded
+
+```
+docker images
 ```
 
 ### Options to build

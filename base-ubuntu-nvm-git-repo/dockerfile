@@ -5,13 +5,17 @@
 FROM ubuntu:18.04
 
 ##############################################################################
-# This forces the image to be build on every push!
+# Custom parameters
 ##############################################################################
 
 ARG CACHEBUST=0
-ARG git_repository=https://github.com/nothnk/cra-sample.git
 ARG node_version=v12.12.0
 ARG nvm_version=v0.35.0
+
+ENV NVM_DIR /root/.nvm
+ENV NVM_VERSION=$nvm_version
+ENV NODE_VERSION=$node_version
+ENV GIT_URL_REPOSITORY=$git_repository
 
 ##############################################################################
 # Replace shell with bash so we can source files
@@ -25,11 +29,6 @@ RUN rm /bin/sh && \
 # Install dependencies from Ubuntu
 ##############################################################################
 
-ENV NVM_DIR /root/.nvm
-ENV NVM_VERSION=$nvm_version
-ENV NODE_VERSION=$node_version
-ENV GIT_URL_REPOSITORY=$git_repository
-
 RUN apt-get update --fix-missing && \
 	apt-get install -y curl && \
 	##############################################################################
@@ -40,8 +39,8 @@ RUN apt-get update --fix-missing && \
 	source $NVM_DIR/nvm.sh && \
 	nvm install $NODE_VERSION && \
 	nvm cache clear
-	# apt-get remove -y curl && \
-	# rm -rf /var/lib/apt/lists/*
+# apt-get remove -y curl && \
+# rm -rf /var/lib/apt/lists/*
 
 ENV PATH $NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
 
@@ -51,16 +50,8 @@ ENV PATH $NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
 
 RUN apt-get -y install git
 
-
 ##############################################################################
-# Clone project
+# Show versions installed
 ##############################################################################
-
-WORKDIR /app  
-RUN git clone $GIT_URL_REPOSITORY .
 RUN node -v
 RUN npm -v
-RUN npm install 
-RUN ls -la 
-EXPOSE 3000  
-CMD npm run start
