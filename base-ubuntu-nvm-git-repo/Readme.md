@@ -12,7 +12,8 @@ This docker image is the default Ubuntu image with the Node Version Manager (nvm
 
 | Tag                | Ubuntu | nvm    | node    | npm   |
 | ------------------ | ------ | ------ | ------- | ----- |
-| `0.0.1` (`latest`) | 18.04  | 0.35.0 | 12.12.0 | 6.4.1 |
+| `0.0.1`            | 18.04  | 0.35.0 | 12.12.0 | 6.4.1 |
+| `0.0.2` (`latest`) | 18.04  | 0.35.0 | 12.16.2 | 6.4.1 |
 
 ## Use this image
 

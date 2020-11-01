@@ -9,7 +9,7 @@ FROM ubuntu:18.04
 ##############################################################################
 
 ARG CACHEBUST=0
-ARG node_version=v12.12.0
+ARG node_version=v12.16.1
 ARG nvm_version=v0.35.0
 
 ENV NVM_DIR /root/.nvm
